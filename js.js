@@ -7,6 +7,11 @@ input.addEventListener("click", () => {
   let reverse = [];
   for (let i = 0; i < sliced.length; i++) {
     reverse.unshift(sliced[i]);
-    console.log(reverse);
+  }
+  console.log(reverse.join(""));
+  if (reverse.join("") === givenWordValue) {
+    console.log(`${givenWordValue} is a palindrome!`);
+  } else {
+    console.log(`no`);
   }
 });
