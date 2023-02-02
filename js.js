@@ -1,5 +1,6 @@
 let givenWord = document.querySelector("#word-input");
 let input = document.querySelector("#submit-butt");
+let answer = document.querySelector("#answer");
 
 input.addEventListener("click", () => {
   let givenWordValue = givenWord.value.toLowerCase();
@@ -9,9 +10,9 @@ input.addEventListener("click", () => {
     reverse.unshift(sliced[i]);
   }
   console.log(reverse.join(""));
-  if (reverse.join("") === givenWordValue) {
-    console.log(`${givenWordValue} is a palindrome!`);
+  if (reverse.join("") == givenWordValue) {
+    answer.innerHTML = `${givenWordValue} is a palindrome!`;
   } else {
-    console.log(`no`);
+    answer.innerHTML = `no`;
   }
 });
